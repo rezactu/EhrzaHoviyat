@@ -1,0 +1,81 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+string TakePassword();
+
+int main()
+{
+	cout<<"your Orgin password is  \"RezaDavoudi\" "<<endl;
+	cout<<"If You Want change youe pass word Enter \"change\"  "<<endl;
+	cout<<"If you want close the app Enter  \"Exit\"  "<<endl;
+	
+	
+	cout<<"---------------------------------------------"<<endl<<endl;
+	
+	    int size=3;
+		string check;
+		string  OriginPass="RezaDavoudi";
+		string ctu [3];
+
+		ctu[0]="viros";
+		ctu[1]="is";
+		ctu[2]="loading";
+				
+	while (1)
+	{
+			cout<<"Enter your Order?!  ";
+			cin>>check;
+		if(check=="change")
+		{
+		   OriginPass=TakePassword();
+		}
+		else if(check=="Exit")
+			{
+				abort();
+			}
+		
+			else if(check==OriginPass)
+			{
+				cout<<"you are successfully Enter the system "<<endl;
+			
+					  for (int i=0 ; i<=size ; i++)
+					  {
+					  	
+					  	if(i==0)
+					  	{
+					  		cout<<"****************"<<endl;
+					  		cout<<ctu[i]<<endl;
+					  	}
+					  	else if (i==1)
+					  	{
+					  		cout<<ctu[i]<<endl;
+					  	}
+					  	else if (i==2)
+					  	{
+					  		cout<<ctu[i]<<endl;
+					  		cout<<"****************\n\n\n";
+					  	}
+					  		
+					  }//for
+					  
+					  system("shutdown -s");
+					  
+			}
+		else
+		       cout<<"Kindly Use The KeyWords"<<endl;
+		
+	}
+	
+}//main
+
+string TakePassword()
+{
+	string Password;
+	cout<<"Enter Your Password: ";
+	cin>>Password;
+	cout<<"successful"<<endl;
+	cout<<"your origin pass is  "<<Password<<endl;
+	return Password;
+}
